@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Jobs - Job Seeker Ultimate</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/jobs.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="logo text-2xl font-bold text-blue-600">Job Seeker Ultimate</div>
+    <nav>
+      <ul class="flex gap-8 text-gray-700">
+        <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+        <li><a href="services.html" class="hover:text-blue-600">Services</a></li>
+        <li><a href="jobs.html" class="hover:text-blue-600 font-semibold text-blue-600">Jobs</a></li>
+        <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- SEARCH SECTION -->
+<div class="max-w-4xl mx-auto mt-10 px-4">
+  <form id="searchForm" class="flex gap-4">
+    <input 
+      type="text" 
+      id="keyword" 
+      placeholder="Search jobs (e.g. developer, marketing)" 
+      class="flex-1 p-3 border rounded-lg"
+      required
+    >
+    <button class="bg-blue-600 text-white px-6 py-2 rounded-lg">
+      Search
+    </button>
+  </form>
+</div>
+
+<!-- RESULTS -->
+<div id="results" class="max-w-4xl mx-auto mt-6 px-4"></div>
+
+<!-- SAVED JOBS -->
+<div class="max-w-4xl mx-auto mt-10 px-4">
+  <h2 class="text-xl font-bold mb-4">❤️ My Saved Jobs</h2>
+  <div id="saved-jobs"></div>
+</div>
+
+<!-- FOOTER -->
+  <footer class="mt-auto bg-gray-900 text-white py-12 text-center">
+    <div class="container mx-auto px-4">
+      <p>&copy; 2026 Job Seeker Ultimate Mauritius. All rights reserved.</p>
+      <p class="mt-2">
+        <a href="privacy.html" class="text-blue-400">Privacy Policy</a> • 
+        <a href="terms.html" class="text-blue-400">Terms of Use</a>
+      </p>
+    </div>
+  </footer>
+
+<!-- EXTERNAL JS -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

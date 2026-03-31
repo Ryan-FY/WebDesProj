@@ -1,0 +1,152 @@
+/* ==========================================================================
+   Jobs Page
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f9fafb;          /* bg-gray-50 */
+  color: #111827;                     /* gray-900 */
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Headings */
+h2, h3 {
+  color: #111827;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.5rem;                  /* ≈ text-4xl */
+}
+
+h3 {
+  font-size: 1.75rem;                 /* ≈ text-2xl */
+}
+
+/* Search form */
+#searchForm {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+#keyword {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  font-size: 1.1rem;
+  border: 1px solid #d1d5db;         /* gray-300 */
+  border-radius: 0.5rem;              /* rounded-lg */
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#keyword:focus {
+  border-color: #2563eb;              /* blue-600 */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+#searchForm button {
+  padding: 1rem 2rem;
+  background-color: #2563eb;          /* bg-blue-600 */
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#searchForm button:hover {
+  background-color: #1d4ed8;          /* blue-700 */
+}
+
+/* Job cards */
+.job-card {
+  background: white;
+  border-radius: 1rem;                /* rounded-xl */
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #e5e7eb;          /* gray-200 subtle border */
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.job-card strong {
+  font-size: 1.25rem;
+  color: #1e40af;                     /* blue-800 */
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.job-card a {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.job-card a:hover {
+  color: #1d4ed8;
+}
+
+.job-card button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #fef08a;          /* ≈ yellow-300 warm save button */
+  color: #854d0e;                     /* yellow-800 */
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.job-card button:hover {
+  background-color: #fde047;          /* yellow-400 */
+}
+
+/* Sections */
+#results, #saved-jobs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  #results, #saved-jobs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  #results, #saved-jobs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Loading / empty states */
+#results p, #saved-jobs p {
+  text-align: center;
+  color: #6b7280;                     /* gray-500 */
+  font-style: italic;
+  padding: 3rem 1rem;
+  background: white;
+  border-radius: 1rem;
+  border: 1px dashed #d1d5db;
+}
+
+/* Footer spacing */
+footer {
+  margin-top: auto;
+}
